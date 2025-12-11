@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Momo+Signature&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #FFC60B;
+    --green: #85AE85;
+    --light-blue: #dff1ff;
+    --less-light-blue: #9fd4fd;
+    --dark-cyan: #199bff;
+    --dark-blue: #230AFF;
+    --purple: #7766FF;
+    --lilac: #AAA0FF;
+    --dark-orange: #df880a;
+    --chocolate: #c16a08;
+    --khaki: #ffde73;
+    --delete-red: rgba(249, 197, 197, 0.3);
+    --delete-hover-red: rgba(245, 150, 150, 0.7);
+    --border-purple: #6569c8;
+    --dark-purple: rgb(25, 28, 69);
+    --transparent: rgba(0,0,0,0);
+    --clr-text-primary: #d8d9ed;
+    --clr-bg-card-light: #343963;
+    --clr-bg-card-dark: #1c1f35;
+}
+
+/*Type Styling*/
+body{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(12deg, rgba(25, 28, 69, 1) 30%, rgba(35, 40, 95, 0.9) 70%, rgba(43, 49, 120, 0.75) 90%, rgba(62, 69, 171, 0.9) 109.2%);
+    gap: 30px;
+    font-family: "Noto Sans Mono", "Roboto", sans-serif;
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 30px 45px;
+    overflow: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+button:hover{
+    cursor: pointer;
+}
