@@ -1,23 +1,49 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
-    mode: "development",
+module.exports = (env, argv) => ({
+    mode: argv.mode === 'production' ? 'production' : 'development',
     entry: "./public/index.js",
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
+        publicPath: '/',
+        assetModuleFilename: 'assets/[name][ext]',
     },
-    devtool: "eval-source-map",
+    devtool: argv.mode === 'production' ? 'source-map' : 'eval-source-map',
     devServer: {
-        watchFiles: ["./public/index.html"],
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        compress: true,
+        port: 3000,
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
+            favicon: "./public/MWA-icon.png",
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { 
+                    from: 'public/assets', 
+                    to: 'assets',
+                    noErrorOnMissing: true, // Don't fail if the directory doesn't exist
+                },
+                {
+                    from: 'public/MWA-icon.png',
+                    to: 'MWA-icon.png',
+                },
+                {
+                    from: 'public/x-mark-16.png',
+                    to: 'x-mark-16.png',
+                }
+            ]
+        })
     ],
     module: {
         rules: [
@@ -31,8 +57,11 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource",
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[name][ext]',
+                },
             },
         ],
     },
-};
+});
