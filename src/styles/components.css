@@ -129,7 +129,7 @@ input::placeholder{
 #location-search::-webkit-search-cancel-button{
     -webkit-appearance: none;
     cursor: pointer;
-    background: url(/x-mark-16.png);
+    background: url('../assets/x-mark-16.png');
     height: 12px;
     width: 12px;
     background-size: 12px 12px;

@@ -25,21 +25,27 @@ module.exports = (env, argv) => ({
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
-            favicon: "./public/MWA-icon.png",
+            favicon: "./public/assets/MWA-icon.png",
         }),
         new CopyWebpackPlugin({
             patterns: [
                 { 
                     from: 'public/assets', 
                     to: 'assets',
-                    noErrorOnMissing: true, // Don't fail if the directory doesn't exist
+                    noErrorOnMissing: true, 
+                    globOptions: {
+                        // This will copy all files from public/assets to dist/assets
+                        dot: true,
+                        gitignore: true,
+                    },
+                
                 },
                 {
-                    from: 'public/MWA-icon.png',
+                    from: 'public/assets/MWA-icon.png',
                     to: 'MWA-icon.png',
                 },
                 {
-                    from: 'public/x-mark-16.png',
+                    from: 'public/assets/x-mark-16.png',
                     to: 'x-mark-16.png',
                 }
             ]
