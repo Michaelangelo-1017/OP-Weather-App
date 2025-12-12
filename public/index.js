@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     const mainWeatherCont = document.getElementById('main-weather-cont');
     console.log('main-weather-cont element:', mainWeatherCont);
     await loadDefaultPage();
+    
 })
 
 //Testing Block
