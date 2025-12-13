@@ -1,4 +1,5 @@
 import getNowData from "../utilities/getNowData";
+import rainIconImg from "../../assets/weather/rain.png";
 
 function displayRainChance(weatherData) {
     const nowData = getNowData(weatherData);
@@ -9,7 +10,7 @@ function displayRainChance(weatherData) {
     rainChanceTextCont.classList.add('extra-weather-title');
     rainChanceTextCont.id = 'rain-chance-title-cont';
     const rainChanceIcon = document.createElement('img');
-    rainChanceIcon.src = `assets/rain.png`;
+    rainChanceIcon.src = rainIconImg;
     rainChanceIcon.alt = `rain-chance icon`;
     rainChanceIcon.id = 'rain-chance-icon';
     rainChanceIcon.setAttribute('class', 'weather-icon');

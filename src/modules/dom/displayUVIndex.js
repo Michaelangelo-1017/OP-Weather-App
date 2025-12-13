@@ -1,3 +1,5 @@
+import uvIconImg from "../../assets/weather/clear-day.png";
+
 function displayUVIndex(weatherData) {
     const uvCont = document.createElement('div');
     uvCont.classList.add('extra-weather-info');
@@ -6,7 +8,7 @@ function displayUVIndex(weatherData) {
     uvTextCont.classList.add('extra-weather-title');
     uvTextCont.id = 'uv-title-cont';
     const uvIndexIcon = document.createElement('img');
-    uvIndexIcon.src = `assets/clear-day.png`;
+    uvIndexIcon.src = uvIconImg;
     uvIndexIcon.alt = `UV index icon`;
     uvIndexIcon.id = 'uv-index-icon';
     uvIndexIcon.setAttribute('class', 'weather-icon');

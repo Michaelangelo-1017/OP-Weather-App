@@ -1,3 +1,5 @@
+import sunriseIconImg from "../../assets/weather/sunrise.png";
+
 function displaySunrise(weatherData) {
     const sunriseCont = document.createElement('div');
     sunriseCont.classList.add('extra-weather-info');
@@ -6,7 +8,7 @@ function displaySunrise(weatherData) {
     sunriseTextCont.classList.add('extra-weather-title');
     sunriseTextCont.id = 'sunrise-title-cont';
     const sunriseIcon = document.createElement('img');
-    sunriseIcon.src = `assets/sunrise.png`;
+    sunriseIcon.src = sunriseIconImg;
     sunriseIcon.alt = `sunrise icon`;
     sunriseIcon.id = 'sunrise-icon';
     sunriseIcon.setAttribute('class', 'weather-icon');

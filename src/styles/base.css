@@ -41,8 +41,13 @@ body{
     overflow: auto;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 button:hover{
     cursor: pointer;
+}
+
+html,body{
+    overscroll-behavior: none;
 }

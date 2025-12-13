@@ -1,6 +1,5 @@
 import getCitiesInfo from "../data/getCitiesInfo";
 import addSearchOptions from "./addSearchOptions";
-import loadDefaultPage from "./defaultPage";
 import loadPage from "./loadPage";
 
 function initEventListeners(){
@@ -8,6 +7,7 @@ function initEventListeners(){
     const searchOptionsCont = document.getElementById('search-options-cont');
     const toggleBtn = document.getElementById('toggle-btn');
     const toggleSlider = document.querySelector('.toggle-slider');
+
     toggleBtn.addEventListener('click',()=>{
         toggleSlider.classList.toggle('fahrenheit');
         loadPage(searchBar.value || `Luton`);

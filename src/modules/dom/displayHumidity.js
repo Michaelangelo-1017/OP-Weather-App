@@ -1,4 +1,5 @@
 import getNowData from "../utilities/getNowData";
+import humidityIconImg from "../../assets/weather/raindrop.png";
 
 function displayHumidity(weatherData) {
     const nowData = getNowData(weatherData);
@@ -9,7 +10,7 @@ function displayHumidity(weatherData) {
     humidityTextCont.classList.add('extra-weather-title');
     humidityTextCont.id = 'humidity-title-cont';
     const humidityIcon = document.createElement('img');
-    humidityIcon.src = `assets/raindrop.png`;
+    humidityIcon.src = humidityIconImg;
     humidityIcon.alt = `humidity icon`;
     humidityIcon.id = 'humidity-icon';
     humidityIcon.setAttribute('class', 'weather-icon');

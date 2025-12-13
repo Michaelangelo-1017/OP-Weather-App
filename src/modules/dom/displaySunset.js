@@ -1,3 +1,5 @@
+import sunsetIconImg from "../../assets/weather/sunset.png";
+
 function displaySunset(weatherData) {
     const sunsetCont = document.createElement('div');
     sunsetCont.classList.add('extra-weather-info');
@@ -6,7 +8,7 @@ function displaySunset(weatherData) {
     sunsetTextCont.classList.add('extra-weather-title');
     sunsetTextCont.id = 'sunset-title-cont';
     const sunsetIcon = document.createElement('img');
-    sunsetIcon.src = `assets/sunset.png`;
+    sunsetIcon.src = sunsetIconImg;
     sunsetIcon.alt = `sunset icon`;
     sunsetIcon.id = 'sunset-icon';
     sunsetIcon.setAttribute('class', 'weather-icon');

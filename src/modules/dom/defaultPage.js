@@ -1,6 +1,5 @@
 import getCitiesInfo from "../data/getCitiesInfo";
 import getWeatherData from "../data/getWeatherData";
-import getWeatherIcon from "../utilities/getWeatherIcon";
 import displayFeelsLikeCard from "./displayFeelsLikeCard";
 import displayGalleryContent from "./displayGalleryContent";
 import displayHumidity from "./displayHumidity";
