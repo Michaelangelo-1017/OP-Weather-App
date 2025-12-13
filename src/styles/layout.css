@@ -155,3 +155,9 @@
         padding: 10px;
     }
 }
+
+@media screen and (min-width: 1376px) {
+    #timeline-gallery-cont{
+        justify-content: space-evenly;
+    }
+}
